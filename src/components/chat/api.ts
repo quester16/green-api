@@ -62,7 +62,6 @@ export async function receiveNotification(
   const { data } = await axios.get<MessageResponse | null>(
     url(connection, "receiveNotification"),
     {
-      params: { receiveTimeout: 5 },
       signal,
       timeout: 15000,
     },
